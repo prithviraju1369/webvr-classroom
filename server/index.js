@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const { resolve } = require('path');
 const chalk = require('chalk');
-const passport = require('passport');
+const compression = require('compression');
 
 // Custom Middleware to redirect HTTP to https using request headers appended
 // By one of Heroku's AWS ELB instances.
@@ -21,6 +21,7 @@ const forceSSL = function (req, res, next) {
   }
   return next();
 };
+app.use(compression());
 
 if (process.env.NODE_ENV === 'production') {
   console.log(chalk.blue('Production Environment detected, so redirect to HTTPS'));
