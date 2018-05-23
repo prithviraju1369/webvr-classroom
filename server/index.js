@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const { resolve } = require('path');
 const chalk = require('chalk');
+const passport = require('passport');
 const compression = require('compression');
 
 // Custom Middleware to redirect HTTP to https using request headers appended
