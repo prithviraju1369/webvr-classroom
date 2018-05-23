@@ -109758,19 +109758,7 @@
 	
 	/** You should probably use a different stun server doing commercial stuff **/
 	/** Also see: https://gist.github.com/zziuni/3741933 **/
-	var ICE_SERVERS = [{ url: 'stun:stun.l.google.com:19302' }, {
-	  url: 'turn:numb.viagenie.ca',
-	  credential: 'muazkh',
-	  username: 'webrtc@live.com'
-	}, {
-	  url: 'turn:192.158.29.39:3478?transport=udp',
-	  credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-	  username: '28224511:1379330808'
-	}, {
-	  url: 'turn:192.158.29.39:3478?transport=tcp',
-	  credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-	  username: '28224511:1379330808'
-	}];
+	var ICE_SERVERS = [{ url: 'stun:stun.l.google.com:19302' }];
 	
 	// This will be our socket connection
 	var signalingSocket = null;
@@ -116634,17 +116622,6 @@
 	        { style: props.styles.loginButton, type: 'submit' },
 	        'Log In'
 	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { style: props.styles.orDividerLineDiv },
-	      _react2.default.createElement('div', { style: props.styles.orDividerLineBefore }),
-	      _react2.default.createElement(
-	        'p',
-	        { style: props.styles.orDivider },
-	        'or'
-	      ),
-	      _react2.default.createElement('div', { style: props.styles.orDividerLineAfter })
 	    )
 	  );
 	};
