@@ -29,10 +29,10 @@ export default class Lobby extends React.Component {
         <Room floorWidth="50"
           floorHeight="50"
           wallHeight="25"
-          wallColor="#f9f7d9"
-          floorColor="gray"
+          wallColor="#012"
+          floorColor="lightblue"
           floorTexture="#floorText"
-          ceilingColor="#8DA0AF" />
+          ceilingColor="#000" />
 
         {/* Orbs */}
         <Teleporter
@@ -43,7 +43,7 @@ export default class Lobby extends React.Component {
           x="-24.5" y="1" z="-3"
           labelx="-2.5" labely="1"
         />
-        <Teleporter
+       {/* <Teleporter
           color="orange"
           label="Space Room"
           href="/vr/spaceroom"
@@ -82,7 +82,7 @@ export default class Lobby extends React.Component {
           rotation="-90"
           x="24.5" y="1" z="5"
           labelx="-1.2" labely="1"
-        />
+       />*/}
 
         {/* Chairs */}
         {
@@ -97,50 +97,24 @@ export default class Lobby extends React.Component {
         }
 
         {/* Projection Screen */}
-        <a-entity id="screen" geometry="primitive: plane; height: 15; width: 20"
-          material="src: #slide" position="0 8.5 -24"></a-entity>
+        <a-entity id="screen" geometry="primitive: plane; height: 20; width: 50"
+          material="src: #slide" position="0 12.2 -24"></a-entity>
 
         {/* Podium */}
         <a-entity id="podium" geometry="primitive: box; depth: 1; height: 1.5; width: 5"
-          material="src: #podium" position="12.5 0.75 -21"></a-entity>
+          material="src: #podium" position="14.5 0.75 -21"></a-entity>
 
         {/* Monitors */}
         <a-collada-model src="#monitor" scale="0.5 0.5 0.5" position="12.5 1.5 -20.5" rotation="0 90 0"></a-collada-model>
         <a-collada-model src="#monitor" scale="0.5 0.5 0.5" position="14.75 1.5 -20.5" rotation="0 90 0"></a-collada-model>
 
-        {/* Couches and coffee tables */}
-        <Couch x="-5" y="0" z="23"
-          rotx="0" roty="0" rotz="0" />
-        <Couch x="-10" y="0" z="23"
-          rotx="0" roty="0" rotz="0" />
-        <Couch x="-13" y="0" z="20"
-          rotx="0" roty="-90" rotz="0" />
-        <Couch x="-2" y="0" z="20"
-          rotx="0" roty="90" rotz="0" />
-        <Couch x="5" y="0" z="23"
-          rotx="0" roty="0" rotz="0" />
-        <Couch x="10" y="0" z="23"
-          rotx="0" roty="0" rotz="0" />
-        <Couch x="2" y="0" z="20"
-          rotx="0" roty="-90" rotz="0" />
-        <Couch x="13" y="0" z="20"
-          rotx="0" roty="90" rotz="0" />
-        <Table x="-7.5" y="0" z="20"
-          color="#521515"
-          legHeight="0.4"
-          depth="1.5" />
-        <Table x="7.5" y="0" z="20"
-          color="#521515"
-          legHeight="0.4"
-          depth="1.5" />
-
         {/* Tables and chairs */}
         <Table x="5" y="0" z="0"
-          color="white"
+          color="#fff"
           legHeight="0.8"
           depth="0.5" />
         <Table x="-5" y="0" z="0"
-          color="white"
+          color="#fff"
           legHeight="0.8"
           depth="0.5" />
         <Chair x="-5.75" y="0" z="0.3" />
@@ -150,18 +124,7 @@ export default class Lobby extends React.Component {
 
 
         {/* Whiteboards */}
-        <a-entity geometry="primitive: plane; height: 3; width: 4.5"
-          material="color: white" position="-10 2.5 24.70" rotation="0 180 0"></a-entity>
-        <a-entity geometry="primitive: plane; height: 3.25; width: 4.75"
-          material="color: gray" position="-10 2.5 24.75" rotation="0 180 0"></a-entity>
-        <a-entity geometry="primitive: plane; height: 3; width: 4.5"
-          material="color: white" position="10 2.5 24.70" rotation="0 180 0"></a-entity>
-        <a-entity geometry="primitive: plane; height: 3.25; width: 4.75"
-          material="color: gray" position="10 2.5 24.75" rotation="0 180 0"></a-entity>
-        <a-entity geometry="primitive: plane; height: 3; width: 4.5"
-          material="color: white" position="0 2.5 24.70" rotation="0 180 0"></a-entity>
-        <a-entity geometry="primitive: plane; height: 3.25; width: 4.75"
-          material="color: gray" position="0 2.5 24.75" rotation="0 180 0"></a-entity>
+       
 
       </a-entity>
     );
