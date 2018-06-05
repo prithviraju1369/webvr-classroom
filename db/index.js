@@ -8,7 +8,7 @@ let url = process.env.DATABASE_URL ||
  `postgres://ccemapytutvlku:767801983fd3a556260132d5b9653d45cece6eece858ba885d06691858ac8d24@ec2-54-243-185-195.compute-1.amazonaws.com:5432/dc6llibj1933kd`;
 
 
-  // url = process.env.DATABASE_URL || `postgres://localhost:5432/${name}`;
+   // url = process.env.DATABASE_URL || `postgres://localhost:5432/${name}`;
 
 console.log(chalk.blue(`Opening database connection to ${url}`));
 
