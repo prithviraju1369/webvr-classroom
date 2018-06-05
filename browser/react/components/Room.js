@@ -21,7 +21,7 @@ export default (props) => (
     <a-entity geometry={`primitive: plane; width:${props.floorWidth}; height:${props.wallHeight}`}
               rotation="0 180 0"
               position={`0 ${props.wallHeight / 2} ${props.floorHeight / 2}`}
-              material={`color: ${props.wallColor}; shader: flat`}/>
+              material={`color: ${props.wallColor}; shader: flat; src: ${props.floorTexture};`} />
 
     <a-entity geometry={`primitive: plane; width:${props.floorHeight}; height:${props.wallHeight}`}
               rotation="0 90 0"
