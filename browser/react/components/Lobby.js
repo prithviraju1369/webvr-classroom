@@ -30,9 +30,11 @@ export default class Lobby extends React.Component {
           floorHeight="50"
           wallHeight="25"
           wallColor="#FFF"
-          floorColor="lightblue"
+          floorColor="gray"
           floorTexture="#floorText"
-          ceilingColor="orange" />
+          ceilingColor="orange" 
+          wallTexture="#wallText"
+          backWallColor="#000" />
 
         {/* Orbs */}
         <Teleporter
@@ -97,7 +99,7 @@ export default class Lobby extends React.Component {
         }
 
         {/* Projection Screen */}
-        <a-entity id="screen" geometry="primitive: plane; height: 20; width: 50"
+        <a-entity id="screen" geometry="primitive: plane; height: 20; width: 48"
           material="src: #slide" position="0 12.2 -24"></a-entity>
 
         {/* Podium */}

@@ -107526,6 +107526,7 @@
 	    _react2.default.createElement("img", { id: "slide", src: "/img/class_copy.png" }),
 	    _react2.default.createElement("img", { id: "podium", src: "/img/fullstack.png" }),
 	    _react2.default.createElement("img", { id: "floorText", src: "/img/carpet2.jpg" }),
+	    _react2.default.createElement("img", { id: "wallText", src: "/img/wall.jpg" }),
 	    _react2.default.createElement("img", { id: "microphone-mute", src: "/img/microphone-mute.png" }),
 	    _react2.default.createElement("img", { id: "microphone-unmute", src: "/img/microphone-unmute.png" }),
 	    _react2.default.createElement("a-mixin", { id: "chair-part", geometry: "primitive: box", material: "color: brown" }),
@@ -110119,19 +110120,19 @@
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorWidth + "; height:" + props.wallHeight,
 	                              rotation: "0 0 0",
 	                              position: "0 " + props.wallHeight / 2 + " " + props.floorHeight / -2,
-	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.floorTexture + ";" }),
+	                              material: "color: " + props.backWallColor }),
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorWidth + "; height:" + props.wallHeight,
 	                              rotation: "0 180 0",
 	                              position: "0 " + props.wallHeight / 2 + " " + props.floorHeight / 2,
-	                              material: "color: " + props.wallColor + "; shader: flat; src: " + props.floorTexture + ";" }),
+	                              material: "color: " + props.wallColor + "; shader: flat; src: " + props.wallTexture + ";" }),
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorHeight + "; height:" + props.wallHeight,
 	                              rotation: "0 90 0",
 	                              position: props.floorHeight / -2 + " " + props.wallHeight / 2 + " 0",
-	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.floorTexture + ";" }),
+	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.wallTexture + ";" }),
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorHeight + "; height:" + props.wallHeight,
 	                              rotation: "0 -90 0",
 	                              position: props.floorHeight / 2 + " " + props.wallHeight / 2 + " 0",
-	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.floorTexture + ";" })
+	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.wallTexture + ";" })
 	          );
 	};
 
@@ -111204,9 +111205,11 @@
 	          floorHeight: '50',
 	          wallHeight: '25',
 	          wallColor: '#FFF',
-	          floorColor: 'lightblue',
+	          floorColor: 'gray',
 	          floorTexture: '#floorText',
-	          ceilingColor: 'orange' }),
+	          ceilingColor: 'orange',
+	          wallTexture: '#wallText',
+	          backWallColor: '#000' }),
 	        _react2.default.createElement(_Teleporter2.default, {
 	          color: 'red',
 	          label: 'The Basement',
@@ -111221,7 +111224,7 @@
 	        (0, _utils.createArray)(-10).map(function (el) {
 	          return _react2.default.createElement(_Chair2.default, { x: '' + el[0], y: '0', z: '' + (-12.5 + el[1]), key: '' + (el[0] + ',' + el[1]) });
 	        }),
-	        _react2.default.createElement('a-entity', { id: 'screen', geometry: 'primitive: plane; height: 20; width: 50',
+	        _react2.default.createElement('a-entity', { id: 'screen', geometry: 'primitive: plane; height: 20; width: 48',
 	          material: 'src: #slide', position: '0 12.2 -24' }),
 	        _react2.default.createElement('a-entity', { id: 'podium', geometry: 'primitive: box; depth: 1; height: 1.5; width: 5',
 	          material: 'src: #podium', position: '14.5 0.75 -21' }),
