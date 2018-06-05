@@ -29,10 +29,10 @@ export default class Lobby extends React.Component {
         <Room floorWidth="50"
           floorHeight="50"
           wallHeight="25"
-          wallColor="#012"
+          wallColor="#FFF"
           floorColor="lightblue"
           floorTexture="#floorText"
-          ceilingColor="#000" />
+          ceilingColor="orange" />
 
         {/* Orbs */}
         <Teleporter

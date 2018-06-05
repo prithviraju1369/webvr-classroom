@@ -110115,11 +110115,11 @@
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorWidth + "; height:" + props.floorHeight,
 	                              rotation: "90 0 0",
 	                              position: "0, " + props.wallHeight + ", 0",
-	                              material: "color: " + props.ceilingColor }),
+	                              material: "color: " + props.ceilingColor + ";  src: " + props.floorTexture + "; repeat:" + props.floorWidth }),
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorWidth + "; height:" + props.wallHeight,
 	                              rotation: "0 0 0",
 	                              position: "0 " + props.wallHeight / 2 + " " + props.floorHeight / -2,
-	                              material: "color: " + props.wallColor }),
+	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.floorTexture + ";" }),
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorWidth + "; height:" + props.wallHeight,
 	                              rotation: "0 180 0",
 	                              position: "0 " + props.wallHeight / 2 + " " + props.floorHeight / 2,
@@ -110127,11 +110127,11 @@
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorHeight + "; height:" + props.wallHeight,
 	                              rotation: "0 90 0",
 	                              position: props.floorHeight / -2 + " " + props.wallHeight / 2 + " 0",
-	                              material: "color: " + props.wallColor }),
+	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.floorTexture + ";" }),
 	                    _react2.default.createElement("a-entity", { geometry: "primitive: plane; width:" + props.floorHeight + "; height:" + props.wallHeight,
 	                              rotation: "0 -90 0",
 	                              position: props.floorHeight / 2 + " " + props.wallHeight / 2 + " 0",
-	                              material: "color: " + props.wallColor })
+	                              material: "color: " + props.wallColor + " shader: flat; src: " + props.floorTexture + ";" })
 	          );
 	};
 
@@ -111203,10 +111203,10 @@
 	        _react2.default.createElement(_Room2.default, { floorWidth: '50',
 	          floorHeight: '50',
 	          wallHeight: '25',
-	          wallColor: '#012',
+	          wallColor: '#FFF',
 	          floorColor: 'lightblue',
 	          floorTexture: '#floorText',
-	          ceilingColor: '#000' }),
+	          ceilingColor: 'orange' }),
 	        _react2.default.createElement(_Teleporter2.default, {
 	          color: 'red',
 	          label: 'The Basement',

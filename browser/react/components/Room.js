@@ -11,12 +11,12 @@ export default (props) => (
     <a-entity geometry={`primitive: plane; width:${props.floorWidth}; height:${props.floorHeight}`}
               rotation="90 0 0"
               position={`0, ${props.wallHeight}, 0`}
-              material={`color: ${props.ceilingColor}`}/>
+              material={`color: ${props.ceilingColor};  src: ${props.floorTexture}; repeat:${props.floorWidth}`}/>
 
     <a-entity geometry={`primitive: plane; width:${props.floorWidth}; height:${props.wallHeight}`}
               rotation="0 0 0"
               position={`0 ${props.wallHeight / 2} ${props.floorHeight / -2}`}
-              material={`color: ${props.wallColor}`}/>
+              material={`color: ${props.wallColor} shader: flat; src: ${props.floorTexture};`}/>
 
     <a-entity geometry={`primitive: plane; width:${props.floorWidth}; height:${props.wallHeight}`}
               rotation="0 180 0"
@@ -26,11 +26,11 @@ export default (props) => (
     <a-entity geometry={`primitive: plane; width:${props.floorHeight}; height:${props.wallHeight}`}
               rotation="0 90 0"
               position={`${props.floorHeight / -2} ${props.wallHeight / 2} 0`}
-              material={`color: ${props.wallColor}`}/>
+              material={`color: ${props.wallColor} shader: flat; src: ${props.floorTexture};`}/>
 
     <a-entity geometry={`primitive: plane; width:${props.floorHeight}; height:${props.wallHeight}`}
               rotation="0 -90 0"
               position={`${props.floorHeight / 2} ${props.wallHeight / 2} 0`}
-              material={`color: ${props.wallColor}`}/>
+              material={`color: ${props.wallColor} shader: flat; src: ${props.floorTexture};`}/>
   </a-entity>
 );
