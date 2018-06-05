@@ -1,9 +1,9 @@
 export default {
   aboutContainer: {
     position: 'relative',
-    height: '160px',
+    height: '40px',
     width: '320px',
-    margin: '50px auto 25px auto',
+    margin: '10% auto 25px auto',
     paddingTop: '20px',
     paddingBottom: '20px',
     backgroundColor: 'rgba(25, 25, 25, 0.75)',
