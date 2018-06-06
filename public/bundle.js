@@ -107509,7 +107509,7 @@
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	      value: true
 	});
 	exports.default = AssetLoader;
 	
@@ -107520,23 +107520,23 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function AssetLoader(props) {
-	  return _react2.default.createElement(
-	    "a-assets",
-	    { timeout: "60000" },
-	    _react2.default.createElement("img", { id: "slide", src: "/img/class_copy.png" }),
-	    _react2.default.createElement("img", { id: "podium", src: "/img/fullstack.png" }),
-	    _react2.default.createElement("img", { id: "floorText", src: "/img/carpet2.jpg" }),
-	    _react2.default.createElement("img", { id: "wallText", src: "/img/wall.jpg" }),
-	    _react2.default.createElement("img", { id: "microphone-mute", src: "/img/microphone-mute.png" }),
-	    _react2.default.createElement("img", { id: "microphone-unmute", src: "/img/microphone-unmute.png" }),
-	    _react2.default.createElement("a-mixin", { id: "chair-part", geometry: "primitive: box", material: "color: brown" }),
-	    _react2.default.createElement("a-asset-item", { id: "monitor", src: "/img/monitor/model.dae" }),
-	    _react2.default.createElement("img", { id: "pusheen", src: "/img/cats/pusheen.gif" }),
-	    _react2.default.createElement("img", { id: "pusheen_gangnam", src: "/img/cats/pusheen_gangnam.gif" }),
-	    _react2.default.createElement("img", { id: "nyancat", src: "/img/cats/nyancat.gif" }),
-	    _react2.default.createElement("img", { id: "bwcat", src: "/img/cats/bwcat.gif" }),
-	    _react2.default.createElement("img", { id: "lasercat", src: "/img/cats/lasercat.gif" })
-	  );
+	      return _react2.default.createElement(
+	            "a-assets",
+	            { timeout: "60000" },
+	            _react2.default.createElement("img", { id: "slide", src: "/img/class_copy.png" }),
+	            _react2.default.createElement("img", { id: "podium", src: "/img/fullstack.png" }),
+	            _react2.default.createElement("img", { id: "floorText", src: "/img/carpet2.jpg" }),
+	            _react2.default.createElement("img", { id: "wallText", src: "/img/wall.jpg" }),
+	            _react2.default.createElement("img", { id: "microphone-mute", src: "/img/microphone-mute.png" }),
+	            _react2.default.createElement("img", { id: "microphone-unmute", src: "/img/microphone-unmute.png" }),
+	            _react2.default.createElement("a-mixin", { id: "chair-part", geometry: "primitive: box", material: "color: brown" }),
+	            _react2.default.createElement("a-asset-item", { id: "monitor", src: "/img/monitor/model.dae" }),
+	            _react2.default.createElement("img", { id: "pusheen", src: "/img/cats/pusheen.gif" }),
+	            _react2.default.createElement("img", { id: "pusheen_gangnam", src: "/img/cats/pusheen_gangnam.gif" }),
+	            _react2.default.createElement("img", { id: "nyancat", src: "/img/cats/nyancat.gif" }),
+	            _react2.default.createElement("img", { id: "bwcat", src: "/img/cats/bwcat.gif" }),
+	            _react2.default.createElement("img", { id: "lasercat", src: "/img/cats/lasercat.gif" })
+	      );
 	}
 
 /***/ }),
@@ -109759,7 +109759,19 @@
 	
 	/** You should probably use a different stun server doing commercial stuff **/
 	/** Also see: https://gist.github.com/zziuni/3741933 **/
-	var ICE_SERVERS = [{ url: 'stun:stun.l.google.com:19302' }];
+	var ICE_SERVERS = [{ url: 'stun:stun.l.google.com:19302' }, {
+	  url: 'turn:numb.viagenie.ca',
+	  credential: 'muazkh',
+	  username: 'webrtc@live.com'
+	}, {
+	  url: 'turn:192.158.29.39:3478?transport=udp',
+	  credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+	  username: '28224511:1379330808'
+	}, {
+	  url: 'turn:192.158.29.39:3478?transport=tcp',
+	  credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+	  username: '28224511:1379330808'
+	}];
 	
 	// This will be our socket connection
 	var signalingSocket = null;
