@@ -86,10 +86,10 @@ module.exports = io => {
     //   connetions with the person entering the room.
     socket.on('joinChatRoom', function (room) {
       console.log(`[${socket.id}] join ${room}`);
-      // if (!(store.getState().rooms.has(room))) {
-      //   console.log(`Adding ${room} to state`);
-      //   store.dispatch(addRoom(room));
-      // }
+      if (!(store.getState().rooms.has(room))) {
+        console.log(`Adding ${room} to state`);
+        store.dispatch(addRoom(room));
+      }
       const roomOnState = store.getState().rooms.get(room);
       roomOnState.valueSeq().forEach(peer => {
         peer.emit('addPeer', { 'peer_id': socket.id, 'should_create_offer': false });
